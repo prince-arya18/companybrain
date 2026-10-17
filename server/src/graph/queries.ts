@@ -64,13 +64,13 @@ export async function seedDemoGraph() {
     MERGE (e2)-[:AUTHORED]->(d)
     MERGE (d)-[:DOCUMENTED_IN {excerpt: $excerpt}]->(doc)
   `, {
-    e1: 'eng-ava', n1: 'Ava Patel', s1: ['incident response', 'platform', 'kubernetes'],
-    e2: 'eng-noah', n2: 'Noah Kim', s2: ['data pipelines', 'warehouse'],
+    e1: 'eng-ava', n1: 'Prince Arya', s1: ['incident response', 'platform', 'kubernetes'],
+    e2: 'eng-noah', n2: 'Aayat', s2: ['data pipelines', 'warehouse'],
     svc1: 'svc-api', sn1: 'API Gateway', svc2: 'svc-data', sn2: 'Data Pipeline',
     incident: 'inc-2026-001', title: 'API latency spike', severity: 'SEV-2',
     summary: 'Synthetic scenario: API latency rose during an analytics export workload that added synchronous work to API request paths.',
     priorIncident: 'inc-2025-042', priorTitle: 'API latency during analytics export', priorSeverity: 'SEV-3',
-    priorSummary: 'Synthetic prior incident: an export workload increased API request latency; Ava Patel resolved the incident.',
+    priorSummary: 'Synthetic prior incident: an export workload increased API request latency; Prince Arya resolved the incident.',
     decision: 'dec-001', decisionTitle: 'Use async events for analytics',
     decisionSummary: 'Synthetic architectural context: decouple analytics writes from API requests. This decision is linked as relevant context only.',
     doc: 'doc-001', docTitle: 'Synthetic internal demo artifact: ADR-001 - Async analytics',
